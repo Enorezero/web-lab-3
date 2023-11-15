@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full list of sights</title>
+</head>
+<body bgcolor="#fffdd0">
+    <h1 align="center"><a href="sights-blg.html">Достопримечательности Благовещенска</a></h1>
+    <h2 align="center" ><a href="full_list_of_sights.html">Полный список достопримечательностей Благовещенска</a></h2>
+    <hr color="navy">
+    <details>
+        <summary>График</summary>
+        <form>
+            <table>
+              <tr>
+                <th>Значениe по оси OX</th>
+                <th>Результат</th>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="oX" value="0">Тип<br>
+                  <input type="radio" name="oX" value="1">Год<br>
+                  <input type="radio" name="oX" value="2">Стоимость<br>
+                </td>
+                <td>
+                  <input type="checkbox" name="oY" value="0">Количество построенных достопримечательностей<br>
+                  <input type="checkbox" name="oY" value="1">Количество построенных типов достопримечательностей<br>
+                  <input type="checkbox" name="oY" value="2">Максимальная стоимость посещения<br>
+                </td>
+              </tr>
+            </table>
+            <input type="button" value="Построить">
+            <p>Здесь будет график</p>
+        </form>	
+    </details>  
+    <details>
+        <summary>Сортировка</summary>
+        <form>
+          <p>
+              Первый уровень:
+              <select name="first_sort">
+                <option value="0">Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Тип</option>
+                <option value="3">Год</option>
+                <option value="4">Улица</option>
+                <option value="5">Дом</option>
+                <option value="6">Стоимость</option>
+              </select>
+              по убыванию? <input  type="checkbox"  name="decreasing_first" >
+            </p>  
+            <p>
+              Второй уровень:
+              <select name="second_sort">
+                <option value="0">Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Тип</option>
+                <option value="3">Год</option>
+                <option value="4">Улица</option>
+                <option value="5">Дом</option>
+                <option value="6">Стоимость</option>
+              </select>
+              по убыванию? <input  type="checkbox"  name="decreasing_second" >
+            </p>
+            <p>
+              Третий уровень:
+              <select name="third_sort">
+                <option value="0">Нет</option>
+                <option value="1">Название</option>
+                <option value="2">Тип</option>
+                <option value="3">Год</option>
+                <option value="4">Улица</option>
+                <option value="5">Дом</option>
+                <option value="6">Стоимость</option>
+              </select>
+              по убыванию? <input type="checkbox"  name="decreasing_third" >
+            </p>
+          <input type="button" value="Сортировать">		
+        </form>	
+    </details> 
+    <details>
+        <summary> Фильтр</summary>
+        <form>
+            <p>
+               <label for="name">Название:</label>
+               <input type="text" name="name">
+            </p>
+            <p>
+                <label for="type">Тип:</label>
+                <input type="text" name="type">
+            </p>
+            <p>
+               <label for="year_from">Год:</label>
+              от <input type="text" name="year_from"> до <input type="text" name="year_to">
+            </p>
+             <p>
+               <label for="street">Улица:</label>
+               <input type="text" name="street">
+            </p>
+            <p>
+                <label for="house">Дом:</label>
+                <input type="text" name="house">
+             </p>
+             <p>
+                <label for="price_from">Стоимость:</label>
+               от <input type="text" name="price_from"> до <input type="text" name="price_to">
+             </p>
+            <input type="button" value="Найти">		
+        </form>	
+    </details>
+    <hr color="navy"> 
+    <br>
+    <table align="center" border="2" width="50%">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Тип</th>
+                <th>Год</th>
+                <th>Улица</th>
+                <th>Номер дома</th>
+                <th>Стоимость посещения в рублях</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>Триумфальная арка</td>
+                <td>Арка</td>
+                <td>1891</td>
+                <td>ул. Краснофлотская</td>
+                <td>145</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Скульптура "Железный бык"</td>
+                <td>Скульптура</td>
+                <td>2014</td>
+                <td>Набережная реки Амур</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник Челноку</td>
+                <td>Памятник</td>
+                <td>2008</td>
+                <td>ул. 50 лет Октября</td>
+                <td>15</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Амурская набережная</td>
+                <td>Набережная</td>
+                <td>1960</td>
+                <td>Рекреация вдоль реки Амур</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Здание центра эстетического воспитания детей им. Белоглазова</td>
+                <td>Здание</td>
+                <td>1897</td>
+                <td>пер. Св. Иннокентия</td>
+                <td>4</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Памятник Н.Муравьему-Амурскому</td>
+                <td>Памятник</td>
+                <td>1993</td>
+                <td> ул. Шевченко</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Пожарная каланча</td>
+                <td>Здание</td>
+                <td>1909</td>
+                <td>ул.Амурская</td>
+                <td>72</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Памятник казакам-поселенцам</td>
+                <td>Памятник</td>
+                <td>2013</td>
+                <td>Садовое товарищество Вишинки</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памяник Муравьему-Амурскому и митрополиту Иннокентию</td>
+                <td>Памятник</td>
+                <td>2009</td>
+                <td>Пересечение ул.Комсомольская и Рёлочного переулка</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Фонтан на площади Ленина</td>
+                <td>Площадь</td>
+                <td>1967</td>
+                <td>Площадь Ленина</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Пограничная вышка</td>
+                <td>Башня</td>
+                <td>1980</td>
+                <td>Краснофлотская улица</td>
+                <td>-</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Беседка-ротонда на Набережной</td>
+                <td>Беседка</td>
+                <td>2013</td>
+                <td>ул.Краснофлотская</td>
+                <td>147</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник пограничнику с собакой</td>
+                <td>Памятник</td>
+                <td>2007</td>
+                <td>ул.Краснофлотская</td>
+                <td>147</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник собаке Дружок</td>
+                <td>Памятник</td>
+                <td>2015</td>
+                <td>ул.Пионерская/td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник продавщице мороженного Зинаиде Синицыной</td>
+                <td>Памятник</td>
+                <td>2010</td>
+                <td>ул.Комсомольская</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник Невозмутимому коту</td>
+                <td>Памятник</td>
+                <td>2015</td>
+                <td>ул.Калинина</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Амфитеатр на Набережной</td>
+                <td>Амфитеатр</td>
+                <td>2019</td>
+                <td>Площадь Ленина</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Первомайский парк</td>
+                <td>Парк</td>
+                <td>1901</td>
+                <td>ул.Краснофлотская</td>
+                <td>2</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Парк Дружбы</td>
+                <td>Парк</td>
+                <td>2012</td>
+                <td>остановка Бакалея</td>
+                <td>-</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Фонтан "Бабочка"</td>
+                <td>Фонтан</td>
+                <td>2022</td>
+                <td>50 лет Октября</td>
+                <td>26</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Музей палеонтологии</td>
+                <td>Музей</td>
+                <td>1997</td>
+                <td>Рёлочный переулок</td>
+                <td>4</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Амурский драматический театр</td>
+                <td>Театр</td>
+                <td>1883</td>
+                <td>ул.Ленина</td>
+                <td>146</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Музей Калачная</td>
+                <td>Музей</td>
+                <td>2021</td>
+                <td>ул.Амурская</td>
+                <td>199</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Благовещенский собор</td>
+                <td>Собор</td>
+                <td>2002</td>
+                <td>Рёлочный переулок</td>
+                <td>15</td>
+                <td>0</td>              
+            </tr>
+            <tr>
+                <td>Церковь Николая Чудотворца</td>
+                <td>Церковь</td>
+                <td>1859</td>
+                <td>Рёлочный переулок</td>
+                <td>15/1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Храм Благовещения Гавриилского монастыря</td>
+                <td>Храм</td>
+                <td>1932</td>
+                <td>ул.Горького</td>
+                <td>133</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Театр Актера и Куклы "Амурчонок"</td>
+                <td>Театр</td>
+                <td>1964</td>
+                <td>ул.Шевченко</td>
+                <td>60/4</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Городской парк</td>
+                <td>Парк</td>
+                <td>1889</td>
+                <td>ул.Ленина</td>
+                <td>144</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Развлекательный центр "Хеллоу парк"</td>
+                <td>Парк</td>
+                <td>2010</td>
+                <td>ул.Мухина</td>
+                <td>114</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Музей "Капсула времени"</td>
+                <td>Музей</td>
+                <td>2020</td>
+                <td>ул.Мухина</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Областная филармония</td>
+                <td>Филармония</td>
+                <td>1961</td>
+                <td>ул.Пионерская</td>
+                <td>1</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Храм святой блаженной Ксении Петербургской</td>
+                <td>Храм</td>
+                <td>2021</td>
+                <td>ул.Дьяченко</td>
+                <td>23</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Скорбященская церковь</td>
+                <td>Церковь</td>
+                <td>1907</td>
+                <td>ул.Краснофлотская</td>
+                <td>53А</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Трогательный зоопарк "Лапушки"</td>
+                <td>Зоопарк</td>
+                <td>2010</td>
+                <td>ул.Мухина, 64</td>
+                <td>64</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Аквапарк "Аква-Плаза"</td>
+                <td>Аквапарк</td>
+                <td>2012</td>
+                <td>ул.Заводская</td>
+                <td>154/1</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Торговый дом товарищества Кунст и Альбертс</td>
+                <td>Торговый дом</td>
+                <td>1895</td>
+                <td>ул.Ленина</td>
+                <td>165Д</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Торговый дом Чурина</td>
+                <td>Торговый дом</td>
+                <td>1867</td>
+                <td>ул.Амурская</td>
+                <td>199</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Стадион "Амур"</td>
+                <td>Спорткомплекс</td>
+                <td>1974</td>
+                <td>ул. Ленина</td>
+                <td>160</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Набережная реки Зея</td>
+                <td>Набережная</td>
+                <td>2023</td>
+                <td>Рекреация вдоль реки Зея</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Кладбище динозавров</td>
+                <td>Кладбище</td>
+                <td>1980</td>
+                <td>Рёлочный переулок</td>
+                <td>4</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Амурский областной краеведческий музей имени Г. С. Новикова-Даурского</td>
+                <td>Музей</td>
+                <td>1891</td>
+                <td>ул.Ленина</td>
+                <td>165</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Речной артиллерийский катер времен ВОВ</td>
+                <td>Памятник</td>
+                <td>1987</td>
+                <td>Набережная реки Амур</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Спорткомплекс "Юность"</td>
+                <td>Спорткомплекс</td>
+                <td>2000</td>
+                <td>ул.Краснофлотская</td>
+                <td>4А</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник в честь награждения Амурской области орденом Ленина</td>
+                <td>Памятник</td>
+                <td>1981</td>
+                <td>На пересечении улиц Островского, 50 лет Октября и Зейской</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Стелла судостроительного завода</td>
+                <td>Стелла</td>
+                <td>1974</td>
+                <td>ул. Пушкина</td>
+                <td>189</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Торговые ряды "Мавритания"</td>
+                <td>Торговый дом</td>
+                <td>1907</td>
+                <td>ул.Б.Хмельницкого</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник судостроителям, погибшим на фронтах Великой Отечественной войны 1941-1945 гг.</td>
+                <td>Памятник</td>
+                <td>1981</td>
+                <td>На пересечении улиц Островского, 50 лет Октября и Зейской</td>
+                <td>-</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Железнодорожный вокзал</td>
+                <td>Вокзал</td>
+                <td>1913</td>
+                <td>ул. Станционная</td>
+                <td>70</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Памятник Святым благоверным князю Петру и княгине Февронии Муроским</td>
+                <td>Памятник</td>
+                <td>2009</td>
+                <td>ул. Б.Хмельницкого</td>
+                <td>3</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr color="navy">
+</body>
+</html>
